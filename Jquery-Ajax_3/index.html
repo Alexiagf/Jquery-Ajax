@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+    <head>
+        <meta charset="utf-8"/>
+        <title>Minha página</title>
+        <script type="text/javascript" src="js/jquery-3.6.0.js"></script>
+        <script type="text/javascript" src="js/main.js"></script>
+        <link rel="stylesheet" type="text/css" href="boostrap/css/bootstrap.min.css">
+    </head>
+    <body>
+
+        <!-- Cabeçalho com botão de pesquisa -->
+        <nav class="navbar navbar-dark bg-dark">
+            <a class="navbar-brand">Consulta CEP</a>
+            <div class="d-flex">
+            <input class="form-control me-2" type="search" placeholder="00000-000" id="cep">
+            <button class="btn btn-outline-success" onclick="ConsultaCep()">Buscar</button>
+            </div>
+        </nav>
+
+       <!-- barra de progresso -->
+        <div class="container barra-progresso" style="margin-top: 80px;">
+            <div class="progress">
+                <div class="progress-bar progress-bar-striped progress-bar-animated" role="progressbar" aria-valuenow="75" aria-valuemin="0" aria-valuemax="100" style="width: 75%"></div>
+              </div>
+            </div>
+
+            
+        <!-- Resultados da consulta -->
+        <div class="container cep" style="margin-top: 20px;">
+            <div class="row">
+                <h3 id="tituloCEP">Nenhum CEP pesquisado</h3>
+            </div>
+
+            <div class="row" style="margin-top: 20px;">
+                <!-- tabela de rsultados -->
+                <TABLE class="table">
+                 <tbody>
+                     <tr>
+                         <td>Logradouro</td>
+                         <td id="logradouro"></td>
+                     </tr>
+                     <tr>
+                        <td>Bairro</td>
+                        <td id="bairro"></td>
+                    </tr>
+                    <tr>
+                        <td>Localidade</td>
+                        <td id="localidade"></td>
+                    </tr>
+                    <tr>
+                        <td>UF</td>
+                        <td id="uf"></td>
+                    </tr>
+                 </tbody>
+
+
+                </TABLE>
+            </div>
+        </div>
+
+    </body>
+</html>
